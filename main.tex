@@ -72,86 +72,86 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
 \captionsetup[table]{position=top,aboveskip=5pt}
 
 % Покдлючить пакет с возможностью подсчета станиц, рисунков, формул, таблиц и т.д.
-%\usepackage{totcount}
-%\regtotcounter{page}
-%\newtotcounter{mfigure}
-%\newtotcounter{mequation}
-%\newtotcounter{mtable}
-%\newtotcounter{bibcnt}
-%
-%\def\oldfigure{} \let\oldfigure=\figure
-%\def\figure{\stepcounter{mfigure}\oldfigure}
-%
-%\def\oldequation{} \let\oldequation=\equation
-%\def\equation{\stepcounter{mequation}\oldequation}
-%
-%\def\oldtable{} \let\oldtable=\table
-%\def\table{\stepcounter{mtable}\oldtable}
-%
-%\def\oldbibitem{} \let\oldbibitem=\bibitem
-%\def\bibitem{\stepcounter{bibcnt}\oldbibitem}
-%
-%\makeatletter
-%\setlength{\parindent}{7.5ex}
-%\renewcommand{\tocprethechapter}{}
-%\renewcommand{\tocpostthechapter}{}
-%\renewcommand{\tocpostthesection}{}
-%\renewcommand{\postthesection}{\ }
-%\renewcommand{\tocsectionindent}{0em}
-%\renewcommand{\tocsectionnameindent}{1.5em}
-%\renewcommand{\sectionindent}{10em}
-%\renewcommand{\captionlabeldelim}{\textendash}
-%\renewcommand{\thetable}{\@arabic\c@table}
-%\renewcommand{\theequation}{\@arabic\c@equation}
-%\renewcommand{\fnum@figure}{Рисунок \thefigure}
-%\renewcommand{\labelitemi}{\textendash}
-%\makeatother
-%
-%\DeclareCaptionFormat{plain}{\captionlabelfont #1 \captionlabeldelim \ #3 \par}
-%
-%\makeatletter
-%\renewcommand*\l@chapter[2]{%
-%\ifnum \c@tocdepth >\m@ne
-%%\addpenalty{-\@highpenalty}
-%\vskip 1.0em \@plus\p@
-%%\setlength\@tempdima{4.5em}
-%\begingroup
-%\parindent \z@ \rightskip \@pnumwidth
-%\parfillskip -\@pnumwidth
-%%\leavevmode\tocchapterfont
-%\advance\leftskip\@tempdima
-%\hskip -\leftskip
-%#1\nobreak
-%\tocchapterfillfont\tocchapterfill\hfill
-%\nobreak\hb@xt@\@pnumwidth{\hss\tocchapternumfont #2}\par
-%\penalty\@highpenalty
-%\endgroup
-%\fi}
-%\makeatother
-%
-%\makeatletter
-%\renewcommand{\@makechapterhead}[1]{% Начало макроопределения
-%\vspace*{20 pt}% Пустое место вверху страницы
-%{\parindent=0pt
-%\hspace{1.5 cm}
-%\upshape \mdseries \rmfamily \normalsize \large
-%\thechapter \hspace{2 pt} #1\par % заголовок главы
-%\nopagebreak
-%\vspace{5 pt}
-%}
-%}
-%\makeatother
-%
-%\renewcommand{\sectionfont}{\upshape \mdseries \rmfamily \normalsize \large}
-%\renewcommand{\sectionindent}{1.6 cm}
+\usepackage{totcount}
+\regtotcounter{page}
+\newtotcounter{mfigure}
+\newtotcounter{mequation}
+\newtotcounter{mtable}
+\newtotcounter{bibcnt}
+
+\def\oldfigure{} \let\oldfigure=\figure
+\def\figure{\stepcounter{mfigure}\oldfigure}
+
+\def\oldequation{} \let\oldequation=\equation
+\def\equation{\stepcounter{mequation}\oldequation}
+
+\def\oldtable{} \let\oldtable=\table
+\def\table{\stepcounter{mtable}\oldtable}
+
+\def\oldbibitem{} \let\oldbibitem=\bibitem
+\def\bibitem{\stepcounter{bibcnt}\oldbibitem}
+
+\makeatletter
+\setlength{\parindent}{7.5ex}
+\renewcommand{\tocprethechapter}{}
+\renewcommand{\tocpostthechapter}{}
+\renewcommand{\tocpostthesection}{}
+\renewcommand{\postthesection}{\ }
+\renewcommand{\tocsectionindent}{0em}
+\renewcommand{\tocsectionnameindent}{1.5em}
+\renewcommand{\sectionindent}{10em}
+\renewcommand{\captionlabeldelim}{\textendash}
+\renewcommand{\thetable}{\@arabic\c@table}
+\renewcommand{\theequation}{\@arabic\c@equation}
+\renewcommand{\fnum@figure}{Рисунок \thefigure}
+\renewcommand{\labelitemi}{\textendash}
+\makeatother
+
+\DeclareCaptionFormat{plain}{\captionlabelfont #1 \captionlabeldelim \ #3 \par}
+
+\makeatletter
+\renewcommand*\l@chapter[2]{%
+\ifnum \c@tocdepth >\m@ne
+%\addpenalty{-\@highpenalty}
+\vskip 1.0em \@plus\p@
+%\setlength\@tempdima{4.5em}
+\begingroup
+\parindent \z@ \rightskip \@pnumwidth
+\parfillskip -\@pnumwidth
+%\leavevmode\tocchapterfont
+\advance\leftskip\@tempdima
+\hskip -\leftskip
+#1\nobreak
+\tocchapterfillfont\tocchapterfill\hfill
+\nobreak\hb@xt@\@pnumwidth{\hss\tocchapternumfont #2}\par
+\penalty\@highpenalty
+\endgroup
+\fi}
+\makeatother
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{% Начало макроопределения
+\vspace*{20 pt}% Пустое место вверху страницы
+{\parindent=0pt
+\hspace{1.5 cm}
+\upshape \mdseries \rmfamily \normalsize \large
+\thechapter \hspace{2 pt} #1\par % заголовок главы
+\nopagebreak
+\vspace{5 pt}
+}
+}
+\makeatother
+
+\renewcommand{\sectionfont}{\upshape \mdseries \rmfamily \normalsize \large}
+\renewcommand{\sectionindent}{1.6 cm}
 
 \begin{document}
 
     % Переопределение стандартных заголовков
-%    \def\introname{\upshape \mdseries \rmfamily \normalsize \large ВВЕДЕНИЕ}
-%    \def\contentsname{\upshape \mdseries \rmfamily \normalsize \large СОДЕРЖАНИЕ}
-%    \def\conclusionname{\upshape \mdseries \rmfamily \normalsize \large ЗАКЛЮЧЕНИЕ}
-%    \def\bibname{\upshape \mdseries \rmfamily \normalsize \large СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+    \def\introname{\upshape \mdseries \rmfamily \normalsize \large ВВЕДЕНИЕ}
+    \def\contentsname{\upshape \mdseries \rmfamily \normalsize \large СОДЕРЖАНИЕ}
+    \def\conclusionname{\upshape \mdseries \rmfamily \normalsize \large ЗАКЛЮЧЕНИЕ}
+    \def\bibname{\upshape \mdseries \rmfamily \normalsize \large СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
 
     %
     % Титульный лист на русском языке
@@ -256,11 +256,11 @@ left=3cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
     \input{chapters/forNIR/intro.tex}
 
     % Глава 1
-    \input{chapters/intro.tex}
+    \input{chapters/overview.tex}
     % Глава 2
-    \input{chapters/chapter_one.tex}
+    \input{chapters/models.tex}
 %    % Глава 3
-    \input{chapters/chapter_two.tex}
+    \input{chapters/results.tex}
 
     % Заключение
     \input{chapters/forNIR/conclusion.tex}
