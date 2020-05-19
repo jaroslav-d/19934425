@@ -1,203 +1,209 @@
 %! Author = jaroslav
 %! Date = 03.03.20
-\chapter{Основные математические модели }
+\chapter{Основные аналитические методы построения модели}
 
-Задан гамильтониан эволюции:
-\begin{equation}\label{hf}
-    H_f = \hbar \omega_a a^{\dagger} a,
-\end{equation}
-Задан гамильтониан, описывающий резервуар:
-\begin{equation}\label{hr}
-    H_R = \hbar \int \omega_{R}(k) b^{\dagger}(k) b(k) d^{D}(k),
-\end{equation}
-Задан гамильтониан взимодействия резервуара и моды:
-\begin{equation}\label{hint}
-    H_{int} = \hbar \lambda \int g(k) (b^{\dagger}(k) a + a^{\dagger} b(k)) d^{D}(k),
-\end{equation}
-Для данной системы выполняются следующие коммутационные соотношения:
+Рассмотрим резервуар~с бесконечным числом степеней свободы $k$ частицы которого описываются~бесконечным~числом
+оператора рождения(уничтожения) $b^\dagger(b)$.
+Данный резервуар определяет информационную среду,~с~которой~взаимодействует агент ПР.
+ПР агента в представлении вторичного~квантования характеризуется операторами рождения (уничтожения)
+$a^\dagger(a)$ в Гильбертовом пространстве.
+Эти операторы должны подчиняться следующим коммутационным соотношениям:
 $
 [\hat{a}, \hat{a}^{\dagger}] = 1,
 [\hat{b}(k), \hat{b}^{\dagger}(k)] = \delta (k-k')
 $
-Приняв для данной системы ядро вида:
+в то время как все остальные коммутаторы предполагаются равными нулю.
+Полный Гамильтониан расматриваемой системы взаимодействия внешнего информационного поля (резервуара) и агента ПР имеет вид:
+
+\begin{multline}\label{H}
+H_f = \hbar \omega_a a^{\dagger} a + \hbar \lambda \int g(k) (b^{\dagger}(k) a + a^{\dagger} b(k)) d^{D}(k) \\
++ \hbar \lambda \int g(k) (b^{\dagger}(k) a + a^{\dagger} b(k)) d^{D}(k),
+\end{multline}
+
+где ${\omega_a}$($\omega_b$) - частотная характеристика~агента(резервуара) соотвественно; $\lambda$
+- коэффициент взаимодействия агента и резервуара; $g(k)$ - ядро, определеяющее сруктуру резервуара;
+$D$ - размерность пространства резервуара.
+В данной работе мы ограничеваемся одномерным резервуаром $D=1$.
+Ядро резервуара $g(k)$ определяющее взаимодействие информационной среды и агента ПР в данной работе имеет вид:
+
 \begin{equation}
     g^{2}(k) = \frac{g}{k^{2} + \alpha^{2}},
 \end{equation}
-и отнормировав по $g$ для уравнений (\ref{hf}-\ref{hint}), получаем следующие выражения:
-\begin{gather}
-    H_f = \hbar \omega^{'}_a a^{\dagger} a, \\
-    H_R = \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k) b(k) d^{D}(k), \\
-    H_{int} = \hbar \lambda \int \frac{(b^{\dagger}(k) a + a^{\dagger} b(k))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k),
-\end{gather}
-где $\omega^{'}_a = \omega_a/g$, $\omega^{'}_{R}(k) = \omega_{R}(k)/g$
 
-Полный гамильтониан системы состоит из суммы этих уравнений:
-\begin{multline}
-    H = H_f + H_R + H_{int} = \hbar \omega^{'}_a a^{\dagger} a + \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k) b(k) d^{D}(k) \\
-    + \hbar \lambda \int \frac{(b^{\dagger}(k) a + a^{\dagger} b(k))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k)
-\end{multline}
-Зная коммутационные соотношения и полный гамильтониан системы можно решить уравнение Гейзенберга
-для операторов $a$ и $b(k)$. Для оператора $b(k)$ будет следующее решение:
+Таким~образом, отнормировав~уравнение \eqref{H} на константу $g$, определяющая ширину распределения
+ядра мы получим:
+
+\begin{equation}\label{H'}
+H' =  \omega^{'}_a a^{\dagger} a +  \int \omega^{'}_{R}(k) b^{\dagger}(k) b(k) dk+ \lambda \int \frac{(b^{\dagger}(k) a + a^{\dagger} b(k))}{\sqrt{k^{2} + \alpha^{2}}} dk,
+\end{equation}
+где $\omega^{'}_a = \omega_a/g$, $\omega^{'}_{R}(k) = \omega_{R}(k)/g$.
+
+Решая уравнение Гейзенберга  $i\frac{\partial f}{\partial t}=[f,H]$, $ f \in a(a^{\dagger})$ и
+$b(b^{\dagger})$ можно получить операторные уравнения для операторов уничтожения $a$ и $b$.
+Принимая во внимание коммутационные соотношение для операторов $a$ и $b$, решение уравнение
+Гейзенберга для оператора $b$ имеет вид:
+
 \begin{equation}\notag
-    \begin{split}
-        i \hbar \frac{\partial b(k,t)}{\partial t} & = [b(k,t), H] = \\
-        & = \hbar \omega^{'}_a b(k,t) a^{\dagger}(t) a(t) + \hbar \int \omega^{'}_{R}(k) b(k,t) b^{\dagger}(k,t) b(k,t) d^{D}(k) + \\
-        & + \hbar \lambda \int \frac{(b(k,t) b^{\dagger}(k,t) a(t) + b(k,t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
-        & - \hbar \omega^{'}_a a^{\dagger}(t) a(t) b(k,t) - \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k,t) b(k,t) b(k,t) d^{D}(k) - \\
-        & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) b(k,t) + a^{\dagger}(t) b(k,t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-        & = xx' + yy' + zz' = \hbar \omega^{'}_{R}(k) b(k,t) + \hbar \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
-    \end{split}
+\begin{split}
+    i \hbar \frac{\partial b(k,t)}{\partial t} & = [b(k,t), H] = \\
+    & = \hbar \omega^{'}_a b(k,t) a^{\dagger}(t) a(t) + \hbar \int \omega^{'}_{R}(k) b(k,t) b^{\dagger}(k,t) b(k,t) d^{D}(k) + \\
+    & + \hbar \lambda \int \frac{(b(k,t) b^{\dagger}(k,t) a(t) + b(k,t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
+    & - \hbar \omega^{'}_a a^{\dagger}(t) a(t) b(k,t) - \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k,t) b(k,t) b(k,t) d^{D}(k) - \\
+    & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) b(k,t) + a^{\dagger}(t) b(k,t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+    & = xx' + yy' + zz' = \hbar \omega^{'}_{R}(k) b(k,t) + \hbar \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
+\end{split}
 \end{equation}
 где
 \begin{equation}\notag
-    \begin{split}
-        xx' & = \hbar \omega^{'}_a b(k,t) a^{\dagger}(t) a(t) - \hbar \omega^{'}_a a^{\dagger}(t) a(t) b(k,t) = \\
-        & = \cancel{\hbar \omega^{'}_a a^{\dagger}(t) b(k,t) a(t)} - \hbar \omega^{'}_a \underbrace{[a^{\dagger}(t), b(k,t)]}_{0} a(t) - \\
-        & - \hbar \omega^{'}_a a^{\dagger}(t) \underbrace{[a(t), b(k,t)]}_{0} - \cancel{\hbar \omega^{'}_a a^{\dagger}(t) b(k,t) a(t)} = \\
-        & = 0
-    \end{split}
+\begin{split}
+    xx' & = \hbar \omega^{'}_a b(k,t) a^{\dagger}(t) a(t) - \hbar \omega^{'}_a a^{\dagger}(t) a(t) b(k,t) = \\
+    & = \cancel{\hbar \omega^{'}_a a^{\dagger}(t) b(k,t) a(t)} - \hbar \omega^{'}_a \underbrace{[a^{\dagger}(t), b(k,t)]}_{0} a(t) - \\
+    & - \hbar \omega^{'}_a a^{\dagger}(t) \underbrace{[a(t), b(k,t)]}_{0} - \cancel{\hbar \omega^{'}_a a^{\dagger}(t) b(k,t) a(t)} = \\
+    & = 0
+\end{split}
 \end{equation}
 \begin{equation}\notag
-    \begin{split}
-        yy' & = \hbar \int \omega^{'}_{R}(k) b(k,t) b^{\dagger}(k,t) b(k,t) d^{D}(k) - \\
-        & - \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k,t) b(k,t) b(k,t) d^{D}(k) = \\
-        & = \hbar \int \omega^{'}_{R}(k) \Bigl([b(k,t), b^{\dagger}(k,t)] b(k,t) + \\
-        & + \cancel{b^{\dagger}(k,t) b(k,t) b(k,t)} - \cancel{b^{\dagger}(k,t) b(k,t) b(k,t)} \Bigr) d^{D}(k) = \\
-        & = \hbar \int \omega^{'}_{R}(k) \delta (k-k') b(k,t) d^{D}(k) = \hbar \omega^{'}_{R}(k') b(k',t)
-    \end{split}
+\begin{split}
+    yy' & = \hbar \int \omega^{'}_{R}(k) b(k,t) b^{\dagger}(k,t) b(k,t) d^{D}(k) - \\
+    & - \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k,t) b(k,t) b(k,t) d^{D}(k) = \\
+    & = \hbar \int \omega^{'}_{R}(k) \Bigl([b(k,t), b^{\dagger}(k,t)] b(k,t) + \\
+    & + \cancel{b^{\dagger}(k,t) b(k,t) b(k,t)} - \cancel{b^{\dagger}(k,t) b(k,t) b(k,t)} \Bigr) d^{D}(k) = \\
+    & = \hbar \int \omega^{'}_{R}(k) \delta (k-k') b(k,t) d^{D}(k) = \hbar \omega^{'}_{R}(k') b(k',t)
+\end{split}
 \end{equation}
 \begin{equation}\notag
-    \begin{split}
-        zz' & = \hbar \lambda \int \frac{(b(k,t) b^{\dagger}(k,t) a(t) + b(k,t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
-        & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) b(k,t) + a^{\dagger}(t) b(k,t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-        & = \hbar \lambda \int \frac{[b(k,t), b^{\dagger}(k,t)] a(t) + \cancel{b^{\dagger}(k,t) b(k,t) a(t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
-        & - \hbar \lambda \int \frac{\overbrace{[a^{\dagger}(t), b(k,t)]}^{0} b(k,t) + \cancel{a^{\dagger}(t) b(k,t) b(k,t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
-        & - \hbar \lambda \int \frac{b^{\dagger}(k,t) \overbrace{[a(t), b(k,t)]}^{0} + \cancel{b^{\dagger}(k,t) b(k,t) a(t)} + }{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-        & + \hbar \lambda \int \frac{\cancel{a^{\dagger}(t) b(k,t) b(k,t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-        & = \hbar \lambda \int \frac{[b(k,t), b^{\dagger}(k,t)] a(t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \hbar \lambda \int \frac{\delta (k-k') a(t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-        & = \hbar \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
-    \end{split}
+\begin{split}
+    zz' & = \hbar \lambda \int \frac{(b(k,t) b^{\dagger}(k,t) a(t) + b(k,t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
+    & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) b(k,t) + a^{\dagger}(t) b(k,t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+    & = \hbar \lambda \int \frac{[b(k,t), b^{\dagger}(k,t)] a(t) + \cancel{b^{\dagger}(k,t) b(k,t) a(t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
+    & - \hbar \lambda \int \frac{\overbrace{[a^{\dagger}(t), b(k,t)]}^{0} b(k,t) + \cancel{a^{\dagger}(t) b(k,t) b(k,t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
+    & - \hbar \lambda \int \frac{b^{\dagger}(k,t) \overbrace{[a(t), b(k,t)]}^{0} + \cancel{b^{\dagger}(k,t) b(k,t) a(t)} + }{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+    & + \hbar \lambda \int \frac{\cancel{a^{\dagger}(t) b(k,t) b(k,t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+    & = \hbar \lambda \int \frac{[b(k,t), b^{\dagger}(k,t)] a(t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \hbar \lambda \int \frac{\delta (k-k') a(t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+    & = \hbar \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
+\end{split}
 \end{equation}
 
-Для оператора $a$ решение:
+Решение уравнение Гейзенберга для оператора $a$:
 \begin{equation}\notag
-    \begin{split}
-        i \hbar \frac{\partial a(t)}{\partial t} & = [a(t), H] = \\
-        & = \hbar \omega^{'}_a a(t) a^{\dagger}(t) a(t) + \hbar \int \omega^{'}_{R}(k) a(t) b^{\dagger}(k,t) b(k,t) d^{D}(k) + \\
-        & + \hbar \lambda \int \frac{(a(t) b^{\dagger}(k,t) a(t) + a(t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
-        & - \hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t) - \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k,t) b(k,t) a(t) d^{D}(k) - \\
-        & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) a(t) + a^{\dagger}(t) b(k,t) a(t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-        & = xx' + yy' + zz' = \hbar \omega^{'}_a a(t) + \hbar \lambda \int \frac{b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k)
-    \end{split}
+\begin{split}
+    i \hbar \frac{\partial a(t)}{\partial t} & = [a(t), H] = \\
+    & = \hbar \omega^{'}_a a(t) a^{\dagger}(t) a(t) + \hbar \int \omega^{'}_{R}(k) a(t) b^{\dagger}(k,t) b(k,t) d^{D}(k) + \\
+    & + \hbar \lambda \int \frac{(a(t) b^{\dagger}(k,t) a(t) + a(t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
+    & - \hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t) - \hbar \int \omega^{'}_{R}(k) b^{\dagger}(k,t) b(k,t) a(t) d^{D}(k) - \\
+    & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) a(t) + a^{\dagger}(t) b(k,t) a(t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+    & = xx' + yy' + zz' = \hbar \omega^{'}_a a(t) + \hbar \lambda \int \frac{b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k)
+\end{split}
 \end{equation}
 
 где
 \begin{equation}\notag
-    \begin{split}
-        xx' & = \hbar \omega^{'}_a a(t) a^{\dagger}(t) a(t) - \hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t) = \\
-        & = \hbar \omega^{'}_a \underbrace{[a(t), a^{\dagger}(t)]}_{1} a(t)
-          + \cancel{\hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t)}
-          - \cancel{\hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t)} = \\
-        & = \hbar \omega^{'}_a a(t) \\
-        yy' & = \hbar \int \omega^{'}_{R}(k) \overbrace{a(t) b^{\dagger}(k,t) b(k,t)}^{= b^{\dagger}(k,t) a(t) b(k,t)} d^{D}(k) \\
-        & - \hbar \int \omega^{'}_{R}(k) \overbrace{b^{\dagger}(k,t) b(k,t) a(t)}^{= b^{\dagger}(k,t) a(t) b(k,t)} d^{D}(k) = 0 \\
-        zz' & = \hbar \lambda \int \frac{(a(t) b^{\dagger}(k,t) a(t)
-        + a(t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
-        & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) a(t)
-        + a^{\dagger}(t) b(k,t) a(t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-    \end{split}
+\begin{split}
+    xx' & = \hbar \omega^{'}_a a(t) a^{\dagger}(t) a(t) - \hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t) = \\
+    & = \hbar \omega^{'}_a \underbrace{[a(t), a^{\dagger}(t)]}_{1} a(t)
+    + \cancel{\hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t)}
+    - \cancel{\hbar \omega^{'}_a a^{\dagger}(t) a(t) a(t)} = \\
+    & = \hbar \omega^{'}_a a(t) \\
+    yy' & = \hbar \int \omega^{'}_{R}(k) \overbrace{a(t) b^{\dagger}(k,t) b(k,t)}^{= b^{\dagger}(k,t) a(t) b(k,t)} d^{D}(k) \\
+    & - \hbar \int \omega^{'}_{R}(k) \overbrace{b^{\dagger}(k,t) b(k,t) a(t)}^{= b^{\dagger}(k,t) a(t) b(k,t)} d^{D}(k) = 0 \\
+    zz' & = \hbar \lambda \int \frac{(a(t) b^{\dagger}(k,t) a(t)
+    + a(t) a^{\dagger}(t) b(k,t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
+    & - \hbar \lambda \int \frac{(b^{\dagger}(k,t) a(t) a(t)
+    + a^{\dagger}(t) b(k,t) a(t))}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+\end{split}
 \end{equation}
 \begin{equation}\notag
-    \begin{split}
-        zz' & = \hbar \lambda \int \frac{\overbrace{[a(t), b^{\dagger}(k,t)]}^{0} a(t) + \cancel{b^{\dagger}(k,t) a(t) a(t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) + \\
-        & + \hbar \lambda \int \frac{[a(t), a^{\dagger}(t)] b(k,t) + \cancel{a^{\dagger}(t) a(t) b(k,t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
-        & - \hbar \lambda \int \frac{\cancel{b^{\dagger}(k,t) a(t) a(t)} - a^{\dagger}(t) \overbrace{[a(t), b(k,t)]}^{0} +
-            \cancel{a^{\dagger}(t) a(t) b(k,t)} }{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
-        & = \hbar \lambda \int \frac{[a(t), a^{\dagger}(t)] b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) =
-        \hbar \lambda \int \frac{b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k)
-    \end{split}
+\begin{split}
+    zz' & = \hbar \lambda \int \frac{\overbrace{[a(t), b^{\dagger}(k,t)]}^{0} a(t) + \cancel{b^{\dagger}(k,t) a(t) a(t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) + \\
+    & + \hbar \lambda \int \frac{[a(t), a^{\dagger}(t)] b(k,t) + \cancel{a^{\dagger}(t) a(t) b(k,t)}}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) - \\
+    & - \hbar \lambda \int \frac{\cancel{b^{\dagger}(k,t) a(t) a(t)} - a^{\dagger}(t) \overbrace{[a(t), b(k,t)]}^{0} +
+    \cancel{a^{\dagger}(t) a(t) b(k,t)} }{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) = \\
+    & = \hbar \lambda \int \frac{[a(t), a^{\dagger}(t)] b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) =
+    \hbar \lambda \int \frac{b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k)
+\end{split}
 \end{equation}
 
-Уравнения для динамкики мод можно перепиать в более простом виде:
+
+В результате, мы имеем следующий вид операторных уравнений для операторов уничтожения $a$ и $b$
+
 {\large
-\begin{equation}
-    \begin{cases}
-        & \dot{a}(t) = -i \omega^{'}_a a(t) - i \lambda \int \frac{b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) \\
-        & \dot{b}(k,t) = -i \omega^{'}_{R}(k) b(k,t) -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
-    \end{cases}
+\begin{equation}\label{syst}
+\begin{cases}
+    & \dot{a}(t) = -i \omega^{'}_a a(t) - i \lambda \int \frac{b(k,t)}{\sqrt{k^{2} + \alpha^{2}}} d^{D}(k) \\
+    & \dot{b}(k,t) = -i \omega^{'}_{R}(k) b(k,t) -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
+\end{cases}
 \end{equation}}
 
-Решение уравнения для динамики оператора $b(k,t)$ решается следующим образом. Сначала необходимо
-решить однородное дифференциальное уравнение, которое для оператора $b(k,t)$ имеет вид:
-\begin{equation}\notag
-    \dot{b}(k,t) = -i \omega^{'}_{R}(k) b(k,t)
-\end{equation}
-Решение ЛОДУ довольно простое:
-\begin{equation}\notag
-    \begin{split}
-        & \frac{\partial b(k,t)}{\partial t} = -i \omega^{'}_{R}(k) b(k,t) \\
-        & \int \frac{\partial b(k,t)}{b(k,t)} = \int -i \omega^{'}_{R}(k) dt \\
-        & ln b(k,t) = -i \omega^{'}_{R}(k) t + ln C \\
-        & b(k,t) = Ce^{-i \omega^{'}_{R}(k) t} \\
-    \end{split}
+
+Решение системы ищется адиабатически исключая резервуар.
+То есть, в начале решается второе уравнение системы \eqref{syst} на ${b}(k,t) $, а затем его решение
+подставляется в первое уравнение на $\dot{a}(t)$.
+Физически это означает, что сперва формируется резервуар, а лишь затем он формирует свойства агента.
+Уравнение на ${b}(k,t)$ является неоднородным дифференциальным уравнением, решение которого имеет
+вид суммы соотвествующего линейного однородного дифференциального уравнения (ЛОДУ) и частоного решения
+неоднородного дифференциального уравнения (ЛНДУ).
+Решение ЛОДУ имеет вид:
+\begin{equation}\label{LODY}
+\begin{split}
+    & \frac{\partial b(k,t)}{\partial t} = -i \omega^{'}_{R}(k) b(k,t); \\
+    & b(k,t) = Ce^{-i \omega^{'}_{R}(k) t} \\
+\end{split}
 \end{equation}
 
-Приняв константу $C = C(t)$, переходим к линейному неоднородному дифференциальному уравнению.
-Чтобы найти $C(t)$ нужно подставить ЛНДУ в исходное уравнение:
+В общем случае $C = C(t)$ и для определения данной функции необходимо подставить \eqref{LODY} в
+соотвествующее ЛНДУ, таким образом:
+
 \begin{equation}\notag
-    \begin{split}
-        & (C(t)e^{-i \omega^{'}_{R}(k) t})^{'}_{t} = -i \omega^{'}_{R}(k) C(t)e^{-i \omega^{'}_{R}(k) t} -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}} \\
-        & C'(t)e^{-i \omega^{'}_{R}(k) t} - \cancel{i \omega^{'}_{R}(k) C(t)e^{-i \omega^{'}_{R}(k) t}} = \cancel{-i \omega^{'}_{R}(k) C(t)e^{-i \omega^{'}_{R}(k) t}} -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}} \\
-        & C'(t)e^{-i \omega^{'}_{R}(k) t} = -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}} \\
-        & C(t) = -i \lambda \int \frac{a(t)e^{i \omega^{'}_{R}(k) t}}{\sqrt{k^{2} + \alpha^{2}}} dt + C_{1}
-    \end{split}
+    (C(t)e^{-i \omega^{'}_{R}(k) t})^{'}_{t} = -i \omega^{'}_{R}(k) C(t)e^{-i \omega^{'}_{R}(k) t} -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
+\end{equation}
+\begin{equation}\label{LNDY}
+    C(t) = -i \lambda \int \frac{a(t)e^{i \omega^{'}_{R}(k) t}}{\sqrt{k^{2} + \alpha^{2}}} dt + C_{1}
 \end{equation}
 
-Найдя $C(t)$, подставляем его в решение ЛНДУ:
-\begin{equation}\notag
-    \begin{split}
-        & b(k,t) = -i \lambda \int_{0}^{t} \frac{a(\tau)e^{i \omega^{'}_{R}(k) \tau}e^{-i \omega^{'}_{R}(k) t}}{\sqrt{k^{2} + \alpha^{2}}} d\tau + C_{1}e^{-i \omega^{'}_{R}(k) t} \\
-        & b(k,t) = -i \lambda \int_{0}^{t} \frac{a(\tau)e^{-i \omega^{'}_{R}(k) (t-\tau)}}{\sqrt{k^{2} + \alpha^{2}}} d\tau + C_{1}e^{-i \omega^{'}_{R}(k) t} \\
-        & b(k,0) = b(k) = C_{1} \\
-        & b(k,t) = b(k)e^{-i \omega^{'}_{R}(k) t} -i \lambda \int_{0}^{t} \frac{a(\tau)e^{-i \omega^{'}_{R}(k) (t-\tau)}}{\sqrt{k^{2} + \alpha^{2}}} d\tau \\
-    \end{split}
-\end{equation}
+Объединяя \eqref{LODY} и \eqref{LNDY} получим решение оператора ${b}(k,t)$ в следующем виде:
 
-Проверка решения:
+\begin{equation}\notag
+b(k,t) = b(k)e^{-i \omega^{'}_{R}(k) t} -i \lambda \int_{0}^{t} \frac{a(\tau)e^{-i \omega^{'}_{R}(k) (t-\tau)}}{\sqrt{k^{2} + \alpha^{2}}} d\tau \\
+\end{equation}
+Данное решение легко проверить, подвставив его в \eqref{syst}.
 \begin{multline}\notag
-    \Biggl( b(k)e^{-i \omega^{'}_{R}(k) t} -i \lambda \int_{0}^{t} \frac{a(\tau)e^{-i \omega^{'}_{R}(k) (t-\tau)}}{\sqrt{k^{2} + \alpha^{2}}} d\tau \Biggr)^{'}_{t} =  \\
-    = b(k) \Bigl( e^{-i \omega^{'}_{R}(k) t} \Bigr)^{'}_{t} - i \lambda \Biggl( \int_{0}^{t} \frac{a(\tau)e^{-i \omega^{'}_{R}(k) (t-\tau)}}{\sqrt{k^{2} + \alpha^{2}}} d\tau \Biggr)^{'}_{t} = \\
-    = -i \omega^{'}_{R}(k) \underbrace{b(k)e^{-i \omega^{'}_{R}(k) t}}_{b(k,0) = b(k,t)} -i \lambda \frac{a(t) \cancel{e^{-i \omega^{'}_{R}(k) (t-t)}}}{\sqrt{k^{2} + \alpha^{2}}} = \\
-    = -i \omega^{'}_{R}(k) b(k,t) -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
+\Biggl( b(k)e^{-i \omega^{'}_{R}(k) t} -i \lambda \int_{0}^{t} \frac{a(\tau)e^{-i \omega^{'}_{R}(k) (t-\tau)}}{\sqrt{k^{2} + \alpha^{2}}} d\tau \Biggr)^{'}_{t} =  \\
+= b(k) \Bigl( e^{-i \omega^{'}_{R}(k) t} \Bigr)^{'}_{t} - i \lambda \Biggl( \int_{0}^{t} \frac{a(\tau)e^{-i \omega^{'}_{R}(k) (t-\tau)}}{\sqrt{k^{2} + \alpha^{2}}} d\tau \Biggr)^{'}_{t} = \\
+= -i \omega^{'}_{R}(k) \underbrace{b(k)e^{-i \omega^{'}_{R}(k) t}}_{b(k,0) = b(k,t)} -i \lambda \frac{a(t) \cancel{e^{-i \omega^{'}_{R}(k) (t-t)}}}{\sqrt{k^{2} + \alpha^{2}}} = \\
+= -i \omega^{'}_{R}(k) b(k,t) -i \lambda \frac{a(t)}{\sqrt{k^{2} + \alpha^{2}}}
 \end{multline}
 
-Приняв $\omega^{'}_{R}(k) = \omega k$, а также зная что:
+
+Мы принимаем $\omega^{'}_{R}(k) = \omega k$ опираясь на известное волновое соотношение в оптике.
+С учетом того, что аналитически решение интеграла имеет вид:
 \begin{equation}\notag
-    \int \frac{e^{-i \omega k (t - \tau)}}{k^{2} + \alpha^{2}} dk = \frac{\pi}{\alpha} e^{-\alpha \omega (t - \tau)}
+    \int \frac{e^{-i \omega k (t - \tau)}}{k^{2} + \alpha^{2}} dk = \frac{\pi}{\alpha} e^{-\alpha \omega (t - \tau)},
 \end{equation}
-подставляем полученное решение уравнения для $b(k,t)$ в уравнение $\dot{a}(t)$:
-\begin{equation}
+то в адиабатическом приближении решение системы \eqref{syst} имеет вид:
+\begin{equation}\label{a}
     \dot{a}(t) =
-        -i \omega^{'}_{a} a(t)
-        -i \lambda \int \frac{b(k)e^{-i \omega k t}}{\sqrt{k^{2} + \alpha^2}} dk
-        -\frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} a(\tau) e^{- \alpha \omega (t - \tau)} d\tau
+    -i \omega^{'}_{a} a(t)
+    -i \lambda \int \frac{b(k)e^{-i \omega k t}}{\sqrt{k^{2} + \alpha^2}} dk
+    -\frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} a(\tau) e^{- \alpha \omega (t - \tau)} d\tau
 \end{equation}
 
-Непосредственно получить решение этого уравнения не получится, поскольку последнее слагаемое
-стоит под знаком интеграла. Но можно получить численное решение уравнения оператора принятия
-решения $n_{a}(t)$, используя правило дифференцирования:
+Решить данное интегрально-операторное уравнение явно не получится из-за специфики данного уравнения,
+поэтому дальнейший анализ модели осуществлялся численно.
+В работе использовался итерационный метод для решения данного уравнения и поиска наблюдаемой
+величина $n_a=\langle{a^{\dagger}(t)a(t)\rangle}$, где усреденение проводится по когнитивным состониям ПР.
+Для численного решения переведем интегральное уравнение в дифференциальное, таким образом:
 \begin{equation}\label{dot_na}
-    \frac{\partial n_{a}(t)}{\partial t}
-    = \frac{\partial (a^{\dagger}(t) a(t))}{\partial t}
-    = \frac{\partial a^{\dagger}(t)}{\partial t}a(t) + a^{\dagger}(t)\frac{\partial a(t)}{\partial t}
-    = \dot{a}^{\dagger}(t) a(t) + a^{\dagger}(t) \dot{a}(t)
+\frac{\partial n_{a}(t)}{\partial t}
+= \frac{\partial (a^{\dagger}(t) a(t))}{\partial t}
+= \frac{\partial a^{\dagger}(t)}{\partial t}a(t) + a^{\dagger}(t)\frac{\partial a(t)}{\partial t}
+= \dot{a}^{\dagger}(t) a(t) + a^{\dagger}(t) \dot{a}(t).
 \end{equation}
-где
+Используя уравнение \eqref{a} мы можем получить следующие соотношения:
 \begin{multline}\notag
-    \dot{a}^{\dagger}(t) a(t) =
-    i \omega^{'}_{a} a^{\dagger}(t) a(t) +
-    i \lambda \int \frac{b^{\dagger}(k) a(t) e^{i \omega k t}}{\sqrt{k^{2} + \alpha^2}} dk \\
-    - \frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} a^{\dagger}(\tau) a(t) e^{- \alpha \omega (t - \tau)} d\tau
+    \dot{a}^{\dagger}(t) a(t)=
+    i \omega^{'}_{a} a^{\dagger}(t) a(t)
+    + i \lambda \int \frac{b^{\dagger}(k) a(t) e^{i \omega k t}}{\sqrt{k^{2} + \alpha^2}} dk \\
+    -\frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} a^{\dagger}(\tau) a(t) e^{- \alpha \omega (t - \tau)} d\tau
 \end{multline}
 \begin{multline}\notag
     a^{\dagger}(t) \dot{a}(t) =
@@ -205,19 +211,26 @@ $
     -i \lambda \int \frac{a^{\dagger}(t) b(k)e^{-i \omega k t}}{\sqrt{k^{2} + \alpha^2}} dk \\
     - \frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} a^{\dagger}(t) a(\tau) e^{- \alpha \omega (t - \tau)} d\tau
 \end{multline}
-перепишем уравнение \eqref{dot_na} в простом виде:
+Подстовляя данные выражения в исходное соотношение \eqref{dot_na} можем получить дифференциальное уравнение наблюдаемой величины $n_a(t)$ в следующем виде:
 \begin{multline}
     \frac{\partial n_{a}(t)}{\partial t} =
     i \lambda \int \frac{(b^{\dagger}(k) a(t) e^{i \omega k t} - a^{\dagger}(t) b(k)e^{-i \omega k t})}{\sqrt{k^{2} + \alpha^2}} dk - \\
     - \frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} e^{- \alpha \omega (t - \tau)} \overbrace{(a^{\dagger}(\tau) a(t) + a^{\dagger}(t) a(\tau))}^{n_{a}(t) \delta(t-\tau) + n_{a}(t) \delta(t-\tau)} d\tau
 \end{multline}
-в более простом виде \eqref{dot_na} выглядит следующим образом:
-\begin{equation}
+в простом виде выражение \eqref{dot_na} можно переписать следующим образом:
+\begin{equation}\label{na}
     \frac{\partial n_{a}(t)}{\partial t} =
     i \lambda \int \frac{(b^{\dagger}(k) a(t) e^{i \omega k t} - a^{\dagger}(t) b(k) e^{-i \omega k t})}{\sqrt{k^{2} + \alpha^2}} dk
     - 2 \frac{\lambda^{2} \pi}{\alpha} n_{a}(t)
 \end{equation}
-для нахождения произведений $b^{\dagger}(k) a(t)$ и $a^{\dagger}(t) b(k)$, можно их продифференцировать:
+
+Данное выражение позволяет отследить как динамику процесса принятие решение у агента.
+Третье слогаемое данного выражение имеет смысл ассимтотической стабилизации, при которой $n_a(t)$ уменьшается со временем.
+В этом случае исключая второе слогаемое мы получим результат описанный в работе
+$n_a(t)=n_{a}e^{-\frac{-2\lambda^2\pi}{\alpha}t}$ описывающий изночально пустой резервуар.
+Второе слагаеме в выражении \eqref{na} описывает немарковское воздействие резервуара на агента ПР.
+Для численного анализа данного слогаемого необходимо определить $(b^{\dagger}(k) a(t)$ и $a^{\dagger}(t) b(k)$.
+Для их нахождения используем \eqref{a}, в этом случае выражение имеет вид:
 \begin{multline}\label{bcrossk_dota}
     \frac{\partial (b^{\dagger}(k) a(t))}{\partial t} =
     b^{\dagger}(k) \dot{a}(t) =
@@ -232,8 +245,7 @@ $
     + i \lambda \int \frac{b^{\dagger}(k) b(k) e^{i \omega k t}}{\sqrt{k^{2} + \alpha^2}} dk
     - \frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} a^{\dagger}(\tau) b(k) e^{- \alpha \omega (t - \tau)} d\tau
 \end{multline}
-принимая во внимание что $b^{\dagger}(k) b(k) = n_{b} \delta(k-k')$, то уравнения \eqref{bcrossk_dota} и \eqref{dota_bk}
-имеют следующий вид:
+принимая во внимание коммутационные соотношения, получим следующие интегрально-дифференциальные уравнения:
 \begin{equation}\label{bcrossk_dota_less}
     b^{\dagger}(k) \dot{a}(t) =
     -i \omega^{'}_{a} b^{\dagger}(k) a(t)
@@ -246,9 +258,9 @@ $
     + i \lambda \frac{n_{b} e^{i \omega k t}}{\sqrt{k^{2} + \alpha^2}}
     - \frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} a^{\dagger}(\tau) b(k) e^{- \alpha \omega (t - \tau)} d\tau
 \end{equation}
-зная правило приращения \[f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}\] можно получить
-значения оператора принятия решения $n_{a}(t)$, используя итерационный метод и уравнения \eqref{bcrossk_dota_less},
-\eqref{dota_bk_less}, где для упрощения $R_{1}(k,t) = b^{\dagger}(k) a(t)$, $R_{2}(k,t) = a^{\dagger}(t) b(k)$:
+
+Используя конечно-разностную схему второго порядка $f'(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$
+можно записать полученные выражения \eqref{na}, \eqref{bcrossk_dota_less} и \eqref{dota_bk_less} в следующем виде:
 \begin{multline}
     n_{a}(t + \Delta t) =
     \Biggl[i \lambda \int \frac{R_{1}(k,t) e^{i \omega k t} - R_{2}(k,t) e^{-i \omega k t}}{\sqrt{k^{2} + \alpha^2}} dk - \\
@@ -263,6 +275,9 @@ $
 \begin{multline}
     R_{2}(k,t + \Delta t) =
     \Biggl[i \omega^{'}_{a} R_{2}(k,t)
-    + i \lambda \frac{n_{b} e^{i \omega k t}}{\sqrt{k^{2} + \alpha^2}} + \\
+    + i \lambda \frac{n_{b} e^{i \omega k t}}{\sqrt{k^{2} + \alpha^2}} - \\
     - \frac{\lambda^{2} \pi}{\alpha} \int_{0}^{t} R_{2}(k,\tau) e^{- \alpha \omega (t - \tau)} d\tau \Biggr] \Delta t + R_{2}(k,t)
 \end{multline}
+где  $R_{1}(k,t) = b^{\dagger}(k) a(t)$, $R_{2}(k,t) = a^{\dagger}(t) b(k)$.
+Решение поставленной задачи сводится к решению трех уравнений описанных выше. Их решение позволит отследить динамику ПР у агента и влияние структуры резервуара
+на принятие решения.

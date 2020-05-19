@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b79074d-f54f-406d-b5f9-429823764900" name="Default Changelist" comment="new_intro_new_section">
+    <list default="true" id="4b79074d-f54f-406d-b5f9-429823764900" name="Default Changelist" comment="new_formulas">
+      <change afterPath="$PROJECT_DIR$/chapters/code.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/chapter_one.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/models.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/chapter_two.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/results.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/forNIR/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/forNIR/intro.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/overview.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/forNIR/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/forNIR/conclusion.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/formulas.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/formulas.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/models.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/models.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/overview.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/overview.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/results.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources.bib" beforeDir="false" afterPath="$PROJECT_DIR$/sources.bib" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +24,11 @@
     <favorites_list name="diplom" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -154,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589209773966</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new_intro_new_section">
+      <created>1589313003554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589313003554</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,7 +177,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -171,6 +188,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first_commit" />
     <MESSAGE value="new_intro_new_section" />
-    <option name="LAST_COMMIT_MESSAGE" value="new_intro_new_section" />
+    <MESSAGE value="new_formulas" />
+    <option name="LAST_COMMIT_MESSAGE" value="new_formulas" />
   </component>
 </project>
