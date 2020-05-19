@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b79074d-f54f-406d-b5f9-429823764900" name="Default Changelist" comment="new_formulas">
-      <change afterPath="$PROJECT_DIR$/chapters/code.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/forNIR/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/forNIR/conclusion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/formulas.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/formulas.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapters/models.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/models.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/overview.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/overview.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/results.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/main.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources.bib" beforeDir="false" afterPath="$PROJECT_DIR$/sources.bib" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589898832973</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add_pictures">
+      <created>1589909354036</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589909354036</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +199,7 @@
     <MESSAGE value="new_intro_new_section" />
     <MESSAGE value="new_formulas" />
     <MESSAGE value="new_gost" />
-    <option name="LAST_COMMIT_MESSAGE" value="new_gost" />
+    <MESSAGE value="add_pictures" />
+    <option name="LAST_COMMIT_MESSAGE" value="add_pictures" />
   </component>
 </project>
