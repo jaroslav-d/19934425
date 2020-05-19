@@ -34,15 +34,16 @@
 \include{10-defines}
 \include{11-abbrev}
 
-% Введение
-\input{chapters/forNIR/intro.tex}
+\include{12-intro}
 
 \mainmatter % это включает нумерацию глав и секций в документе ниже
 
-\include{20-analysis}
-\include{30-design}
-\include{40-impl}
-\include{50-research}
+% Глава 1
+\include{chapters/overview.tex}
+% Глава 2
+\include{chapters/models.tex}
+%    % Глава 3
+\include{chapters/results.tex}
 
 \backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
             %% заключение
@@ -53,20 +54,8 @@
 
 \appendix   % Тут идут приложения
 
-\include{90-appendix1}
-\include{91-appendix2}
-
-% Глава 1
-\input{chapters/overview.tex}
-% Глава 2
-\input{chapters/models.tex}
-%    % Глава 3
-\input{chapters/results.tex}
-
-% Приложения
-\appendix
-\input{chapters/formulas.tex}
-\input{chapters/code.tex}
+\include{chapters/formulas.tex}
+\include{chapters/code.tex}
 
 \end{document}
 

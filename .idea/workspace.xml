@@ -2,79 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b79074d-f54f-406d-b5f9-429823764900" name="Default Changelist" comment="new_formulas">
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/graphics/dia/rpz-idef0.dia" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/graphics/dot/cow2.dot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/graphics/svg/pic01.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/00-abstract.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/10-defines.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/11-abbrev.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/12-intro.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/20-analysis.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/30-design.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/40-impl.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/50-research.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/80-conclusion.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/81-biblio.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/90-appendix1.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/91-appendix2.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/inc/dot/cow2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/inc/src/test.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/inc/svg/pic01.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_class.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_counters.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_floats.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_insets.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_layouts.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_lists.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_sections.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_starsections.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_struct.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_text.layout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/layouts/g7-32_title.inc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/rpz.bib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/lyx/rpz.lyx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/src/test.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/00-abstract.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/10-defines.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/11-abbrev.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/12-intro.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/20-analysis.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/30-design.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/40-impl.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/50-research.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/80-conclusion.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/81-biblio.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/90-appendix1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/91-appendix2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/G2-105.sty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/G7-32.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/G7-32.sty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/GostBase.clo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/cyrtimespatched.sty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/gost780u.bst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/listings.inc.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/macros.inc.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/minted.inc.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/preamble.inc.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/tex/rpz.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/utils/install.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/utils/pdfcrop" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/latex-g7-32/utils/texdepend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/code.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/code.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/forNIR/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/forNIR/conclusion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/forNIR/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/forNIR/intro.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/forNIR/referat.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/forNIR/referat.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/formulas.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/formulas.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/models.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/models.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/overview.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/overview.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/results.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/main.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources.bib" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/rpz.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/00-abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/00-abstract.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/20-analysis.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/30-design.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/40-impl.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/50-research.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/90-appendix1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/91-appendix2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/chapters/code.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/code.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/chapters/forNIR/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/80-conclusion.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/chapters/forNIR/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/12-intro.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/chapters/forNIR/referat.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/chapters/formulas.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/chapters/formulas.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/main.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex-g7-32/tex/rpz.tex" beforeDir="false" afterPath="$PROJECT_DIR$/latex-g7-32/tex/rpz.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,10 +55,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/latex-g7-32/tex" />
+      <recent name="$PROJECT_DIR$/latex-g7-32/tex/chapters" />
       <recent name="$PROJECT_DIR$/.idea" />
       <recent name="$PROJECT_DIR$/chapters" />
       <recent name="$PROJECT_DIR$/forNIR" />
-      <recent name="$PROJECT_DIR$/pictures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,7 +80,7 @@
         <compiler-path />
         <compiler-arguments />
         <main-file>$PROJECT_DIR$/latex-g7-32/tex/main.tex</main-file>
-        <aux-dir>$USER_HOME$</aux-dir>
+        <aux-dir />
       </texify-bibtex>
       <method v="2" />
     </configuration>
