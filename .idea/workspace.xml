@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b79074d-f54f-406d-b5f9-429823764900" name="Default Changelist" comment="new_formulas">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pictures/na_nb.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapters/models.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/models.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/overview.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/overview.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/results.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/graphic_beta_a.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/graphic_beta_a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/graphic_beta_b.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/graphic_beta_b.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,6 +140,8 @@
         <item itemvalue="LaTeX.main" />
         <item itemvalue="LaTeX.test" />
         <item itemvalue="LaTeX.formulas" />
+        <item itemvalue="LaTeX.main" />
+        <item itemvalue="LaTeX.test" />
       </list>
     </recent_temporary>
   </component>

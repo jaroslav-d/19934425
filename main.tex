@@ -111,11 +111,17 @@ escapeinside={#}   % если нужно добавить комментарии
 \newtotcounter{mtable}
 \newtotcounter{bibcnt}
 
+%% Нумерация с 4 страницы
+%\setcounter{page}{4}
+
 \def\oldfigure{} \let\oldfigure=\figure
 \def\figure{\stepcounter{mfigure}\oldfigure}
 
 \def\oldequation{} \let\oldequation=\equation
 \def\equation{\stepcounter{mequation}\oldequation}
+
+\def\oldmultline{} \let\oldmultline=\multline
+\def\multline{\stepcounter{mequation}\oldmultline}
 
 \def\oldtable{} \let\oldtable=\table
 \def\table{\stepcounter{mtable}\oldtable}
@@ -133,8 +139,8 @@ escapeinside={#}   % если нужно добавить комментарии
 \renewcommand{\tocsectionnameindent}{1.5em}
 \renewcommand{\sectionindent}{10em}
 \renewcommand{\captionlabeldelim}{\textendash}
-\renewcommand{\thetable}{\@arabic\c@table}
-\renewcommand{\theequation}{\@arabic\c@equation}
+\renewcommand{\thetable}{\@arabic\value{mtable}}
+\renewcommand{\theequation}{\@arabic\value{mequation}}
 \renewcommand{\fnum@figure}{Рисунок \thefigure}
 \renewcommand{\labelitemi}{\textendash}
 \makeatother
@@ -145,7 +151,7 @@ escapeinside={#}   % если нужно добавить комментарии
 \renewcommand*\l@chapter[2]{%
 \ifnum \c@tocdepth >\m@ne
 %\addpenalty{-\@highpenalty}
-\vskip 1.0em \@plus\p@
+%\vskip 1.0em \@plus\p@
 %\setlength\@tempdima{4.5em}
 \begingroup
 \parindent \z@ \rightskip \@pnumwidth
@@ -163,7 +169,7 @@ escapeinside={#}   % если нужно добавить комментарии
 
 \makeatletter
 \renewcommand{\@makechapterhead}[1]{% Начало макроопределения
-\vspace*{20 pt}% Пустое место вверху страницы
+%\vspace*{20 pt}% Пустое место вверху страницы
 {\parindent=0pt
 \hspace{1.5 cm}
 \upshape \mdseries \rmfamily \normalsize \large
@@ -180,10 +186,11 @@ escapeinside={#}   % если нужно добавить комментарии
 \begin{document}
 
     % Переопределение стандартных заголовков
-    \def\introname{\upshape \mdseries \rmfamily \normalsize \large ВВЕДЕНИЕ}
-    \def\contentsname{\upshape \mdseries \rmfamily \normalsize \large СОДЕРЖАНИЕ}
-    \def\conclusionname{\upshape \mdseries \rmfamily \normalsize \large ЗАКЛЮЧЕНИЕ}
-    \def\bibname{\upshape \mdseries \rmfamily \normalsize \large СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+    \def\introname{\upshape \mdseries \rmfamily \normalsize ВВЕДЕНИЕ}
+    \def\contentsname{\upshape \mdseries \rmfamily \normalsize СОДЕРЖАНИЕ}
+    \def\conclusionname{\upshape \mdseries \rmfamily \normalsize ЗАКЛЮЧЕНИЕ}
+    \def\bibname{\upshape \mdseries \rmfamily \normalsize СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+    \def\defsname{\upshape \mdseries \rmfamily \normalsize СПИСОК СОКРАЩЕНИЙ И УСЛОВНЫХ ОБОЗНАЧЕНИЙ}
 
     %
     % Титульный лист на русском языке
@@ -281,15 +288,7 @@ escapeinside={#}   % если нужно добавить комментарии
     % Реферат для НИР
 %    \input{chapters/forNIR/referat.tex}
 
-    \printnomenclature
-    \center
-    Список обозначений и сокращений
 
-    \begin{description}
-        \item[ИПА] - Информационная психологическая акция
-        \item[ПР] - Принятие решения
-        \item[ООП] - Объектно-ориентированное программирование
-    \end{description}
     % Содержание
     \tableofcontents
 
@@ -307,6 +306,12 @@ escapeinside={#}   % если нужно добавить комментарии
     \input{chapters/forNIR/conclusion.tex}
 
     % Список сокращений и условных обозначений
+    \defs
+    \begin{description}
+        \item[ИПА] - информационно-психологическая акция
+        \item[ПР] - принятие решения
+        \item[ООП] - объектно-ориентированное программирование
+    \end{description}
 
     % Не добавлять длинное тире в качестве разделителя
 %    \newcommand\BibDash{}
